@@ -1,4 +1,4 @@
-export interface Track {
+export interface DzTrack {
   id: number;
   readable: boolean;
   title: string;
@@ -19,14 +19,14 @@ export interface Track {
   bpm: number;
   gain: number;
   available_countries: string[];
-  contributors: Artist[];
+  contributors: DzTrackArtist[];
   md5_image: string;
-  artist: Artist;
-  album: Album;
+  artist: DzTrackArtist;
+  album: DzTrackAlbum;
   type: string;
 }
 
-export interface Album {
+export interface DzTrackAlbum {
   id: number;
   title: string;
   link: string;
@@ -41,7 +41,7 @@ export interface Album {
   type: string;
 }
 
-export interface Artist {
+export interface DzTrackArtist {
   id: number;
   name: string;
   link: string;

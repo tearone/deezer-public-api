@@ -1,4 +1,4 @@
-export interface Album {
+export interface DzAlbum {
   id: number;
   title: string;
   upc: string;
@@ -11,7 +11,7 @@ export interface Album {
   cover_xl: string;
   md5_image: string;
   genre_id: number;
-  genres: Genres;
+  genres: DzAlbumGenres;
   label: string;
   nb_tracks: number;
   duration: number;
@@ -24,12 +24,12 @@ export interface Album {
   explicit_content_lyrics: number;
   explicit_content_cover: number;
   contributors: Contributor[];
-  artist: Artist;
+  artist: DzAlbumArtist;
   type: string;
-  tracks: Tracks;
+  tracks: DzAlbumTracks;
 }
 
-export interface Artist {
+export interface DzAlbumArtist {
   id: number;
   name: string;
   picture: string;
@@ -57,11 +57,11 @@ export interface Contributor {
   role: string;
 }
 
-export interface Genres {
-  data: ArtistElement[];
+export interface DzAlbumGenres {
+  data: DzAlbumArtistElement[];
 }
 
-export interface ArtistElement {
+export interface DzAlbumArtistElement {
   id: number;
   name: string;
   picture?: string;
@@ -69,11 +69,11 @@ export interface ArtistElement {
   tracklist?: string;
 }
 
-export interface Tracks {
-  data: TracksDatum[];
+export interface DzAlbumTracks {
+  data: DzAlbumTracksData[];
 }
 
-export interface TracksDatum {
+export interface DzAlbumTracksData {
   id: number;
   readable: boolean;
   title: string;
@@ -87,12 +87,12 @@ export interface TracksDatum {
   explicit_content_cover: number;
   preview: string;
   md5_image: string;
-  artist: ArtistElement;
-  album: AlbumClass;
+  artist: DzAlbumArtistElement;
+  album: DzAlbumAlbumClass;
   type: string;
 }
 
-export interface AlbumClass {
+export interface DzAlbumAlbumClass {
   id: number;
   title: string;
   cover: string;

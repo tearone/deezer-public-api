@@ -1,4 +1,4 @@
-export interface ArtistAlbum {
+export interface DzArtistAlbum {
   id: number;
   title: string;
   link: string;
@@ -11,13 +11,13 @@ export interface ArtistAlbum {
   genre_id: number;
   fans: number;
   release_date: string;
-  record_type: AlbumType;
+  record_type: DzArtistAlbumType;
   tracklist: string;
   explicit_lyrics: boolean;
   type: string;
 }
 
-export enum AlbumType {
+export enum DzArtistAlbumType {
   Album = "album",
   Ep = "ep",
   Single = "single",

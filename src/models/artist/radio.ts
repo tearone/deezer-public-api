@@ -1,4 +1,4 @@
-export interface ArtistRadioArtist {
+export interface DzArtistRadioArtist {
   id: number;
   name: string;
   link: string;

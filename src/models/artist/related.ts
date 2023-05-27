@@ -1,4 +1,4 @@
-export interface ArtistRelatedArtist {
+export interface DzArtistRelatedArtist {
   id: number;
   name: string;
   link: string;

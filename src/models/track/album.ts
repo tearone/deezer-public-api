@@ -1,4 +1,4 @@
-export interface AlbumTrack {
+export interface DzAlbumTrack {
   id: number;
   readable: boolean;
   title: string;
@@ -15,11 +15,11 @@ export interface AlbumTrack {
   explicit_content_cover: number;
   preview: string;
   md5_image: string;
-  artist: Artist;
+  artist: DzAlbumTrackArtist;
   type: string;
 }
 
-export interface Artist {
+export interface DzAlbumTrackArtist {
   id: number;
   name: string;
   tracklist: string;

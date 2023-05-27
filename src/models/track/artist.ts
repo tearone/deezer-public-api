@@ -1,4 +1,4 @@
-export interface ArtistTopTrack {
+export interface DzArtistTopTrack {
   id: number;
   readable: boolean;
   title: string;
@@ -11,14 +11,14 @@ export interface ArtistTopTrack {
   explicit_content_lyrics: number;
   explicit_content_cover: number;
   preview: string;
-  contributors: ArtistTopTrackContributor[];
+  contributors: DzArtistTopTrackContributor[];
   md5_image: string;
-  artist: ArtistTopTrackArtist;
-  album: ArtistTopTrackAlbum;
+  artist: DzArtistTopTrackArtist;
+  album: DzArtistTopTrackAlbum;
   type: string;
 }
 
-export interface ArtistTopTrackAlbum {
+export interface DzArtistTopTrackAlbum {
   id: number;
   title: string;
   cover: string;
@@ -31,14 +31,14 @@ export interface ArtistTopTrackAlbum {
   type: string;
 }
 
-export interface ArtistTopTrackArtist {
+export interface DzArtistTopTrackArtist {
   id: number;
   name: string;
   tracklist: string;
   type: string;
 }
 
-export interface ArtistTopTrackContributor {
+export interface DzArtistTopTrackContributor {
   id: number;
   name: string;
   link: string;

@@ -1,4 +1,4 @@
-export interface ArtistPlaylist {
+export interface DzArtistPlaylist {
   id: number;
   title: string;
   public: boolean;
@@ -13,11 +13,11 @@ export interface ArtistPlaylist {
   creation_date: string;
   md5_image: string;
   picture_type: string;
-  user: User;
+  user: DzUser;
   type: string;
 }
 
-export interface User {
+export interface DzUser {
   id: number;
   name: string;
   tracklist: string;
