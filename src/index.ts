@@ -27,9 +27,9 @@ export default class DeezerPublicApi {
   /*
    *  ALBUM
    */
-  album(id: string, limit: number, index: number): Promise<DzAlbum> {
+  album(id: string): Promise<DzAlbum> {
     let url = `album/${id}`;
-    return this.call(url, { index, limit });
+    return this.call(url, {});
   }
 
   albumTracks(
@@ -44,9 +44,9 @@ export default class DeezerPublicApi {
   /*
    *  ARTIST
    */
-  artist(id: string, limit: number, index: number): Promise<DzArtist> {
+  artist(id: string): Promise<DzArtist> {
     let url = `artist/${id}`;
-    return this.call(url, { index, limit });
+    return this.call(url, {});
   }
 
   artistTop(
@@ -189,7 +189,7 @@ export default class DeezerPublicApi {
     index: number,
     strict: boolean
   ): Promise<DzDataPage<DzAlbum>> {
-    let url = "search/track?q=" + query;
+    let url = "search/album?q=" + query;
     return this.call(url, { index, limit, order, strict });
   }
 
